@@ -14,6 +14,6 @@ int main(int argc, char** argv) {
     char command2[1000] = { 0 };
     encodeShellString(command2, 1000, argv[1]);
     char cmd[BUFSIZE] = "wc -c < ";
-    strcat(cmd, command2);
+    strncat(cmd, command2, BUFSIZE);
     system(cmd);
 }
