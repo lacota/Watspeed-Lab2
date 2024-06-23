@@ -15,6 +15,6 @@ int main(int argc, char** argv) {
     char cmd[BUFSIZE] = "wc -c < %s";
     //strncat(cmd, argv[1], FILENAMESIZE);
     char command2[1000] = { 0 };
-    sprintf(command2, cmd, argv[1]);
+    snprintf(command2, BUFSIZE, cmd, argv[1]);
     system(command2);
 }
