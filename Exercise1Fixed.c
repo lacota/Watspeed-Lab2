@@ -12,9 +12,9 @@ int main(int argc, char** argv) {
         fprintf(stderr, "Please provide the address of a file as an input.\n");
         return -1;
     }
-    char command2[FILENAMESIZE] = { 0 };
-    char cmd[BUFSIZE] = "wc -c < \"";
-    strncat(cmd, argv[1], FILENAMESIZE);
-    strncat(cmd, "\"", 1);
-    system(cmd);
+    char cmd[BUFSIZE] = "wc -c < %s";
+    //strncat(cmd, argv[1], FILENAMESIZE);
+    char command2[1000] = { 0 };
+    sprintf(command2, cmd, argv[1]);
+    system(command2);
 }
