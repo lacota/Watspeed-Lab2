@@ -3,7 +3,6 @@
 #include <string.h>
 
 #define BUFSIZE 256
-#define FILENAMESIZE 248
 
 // This program prints the size of a specified file in bytes
 int main(int argc, char** argv) {
@@ -13,6 +12,6 @@ int main(int argc, char** argv) {
         return -1;
     }
     char cmd[BUFSIZE] = "wc -c < ";
-    strncat(cmd, argv[1], FILENAMESIZE);
+    strcat(cmd, argv[1]);
     system(cmd);
 }
