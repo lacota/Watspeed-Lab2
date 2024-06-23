@@ -1,2 +1,2 @@
 all:
-	gcc -o main Exercise1.c
+	gcc -o main Exercise1Fixed.c
